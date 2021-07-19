@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+      #catlog{
+          display: grid;
+          grid-template-columns: repeat(4,30%);
+
+      }
+      #catlog >img{
+          height:100px;
+          width:200px;
+      }
+
+  </style>
+  <body>
+      <button onclick="sortLH()" id="sortLH">Sort Low to High</button>
+      <button onclick="sortHL()" id = "sortHL">Sort High to Low</button>
+      <div id="catlog"></div>
+</html>
+<script src="products.js"></script>
