@@ -62,7 +62,15 @@ function showItem(p) {
     let btn = document.createElement("button");
     btn.innerHTML = "Add to Cart";
 
-    btn.addEventListener("click", addItem);
+    btn.addEventListener("click", function () {
+      let data = JSON.parse(localStorage.getItem("productItem"));
+      let obj1 = {};
+      obj1.img = el.img;
+      obj1.price = el.price;
+      obj1.brand = el.brand;
+      data.push(obj1);
+      localStorage.setItem("productItem", JSON.stringify(data));
+    });
 
     btn.style.width = "100px";
     btn.style.height = "30px";
@@ -96,4 +104,6 @@ function sortHL() {
   showItem(data);
 }
 
-function addItem() {}
+function cart() {
+  window.location.href = "cart.html";
+}

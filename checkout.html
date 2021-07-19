@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        id="addrese"
+        placeholder="enter your addresse"
+        required
+      />
+      <input type="number" id="pin" placeholder="enter your pin" required />
+      <input type="text" id="landmark" placeholder="landmark" required />
+    </form>
+    <button onclick="payment()">Payment</button>
+  </body>
+</html>
+<script>
+  function payment() {
+    window.location.href = "payment.html";
+  }
+</script>
